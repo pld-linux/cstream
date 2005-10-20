@@ -6,8 +6,9 @@ License:	MIT
 Group:		Networking/Utilities
 Source0:	http://www.cons.org/cracauer/download/%{name}-%{version}.tar.gz
 # Source0-md5:	64c3fbc1a2ce0f5a1be812263bb25b42
-BuildRequires:	autoconf
 URL:		http://www.cons.org/cracauer/cstream.html
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
