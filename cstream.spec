@@ -1,4 +1,5 @@
 Summary:	A general-purpose streaming tool
+Summary(pl):	Narzêdzie do strumieni ogólnego przeznaczenia
 Name:		cstream
 Version:	2.6.0
 Release:	1
@@ -41,6 +42,41 @@ Features:
 - "gcc -Wall" clean source code, serious effort taken to avoid
   undefined behavior in ANSI C or POSIX, except long long is required.
   Limiting and reporting works on data amounts > 4 GB.
+
+%description -l pl
+cstream to ogólnego przeznaczenia narzêdzie do obs³ugi strumieni
+podobne do uniksowego dd, zwykle u¿ywane w potokach tworzonych z linii
+poleceñ.
+
+Cechy:
+- rozs±dna sk³adnia opcji linii poleceñ
+- ¶cis³e ograniczanie przepustowo¶ci po stronie przychodz±cej;
+  odchylenie czasu w poprzednich odczytach jest równowa¿one w
+  nastêpnych
+- precyzyjne zg³aszanie przepustowo¶ci - na koñcu transmisji lub po
+  ka¿dym otrzymaniu SIGUSR1, co jest do¶æ przydatne podczas d³ugich
+  operacji, aby sprawdziæ ile ju¿ przes³ano; raporty s± wypisywane w
+  bajtach/sekundê oraz ew. w KB/s lub MB/s (1K=1024)
+- SIGHUP powoduje czyste zakoñczenie programu przed otrzymaniem EOF z
+  wej¶cia; wy¶wietlane s± przy tym informacje o czasie
+- wbudowana obs³uga zapisu PID-u do pliku w celu bezbolesnego
+  wysy³ania ww. sygna³ów
+- wbudowana obs³uga potoków nazwanych (fifo); przyk³adowe zastosowanie
+  to "pseudo-urz±dzenie" poch³aniaj±ce lub dostarczaj±ce dane z
+  odpowiedni± czêstotliwo¶ci±, ale wygl±daj±ce jak plik - np. do
+  testowania oprogramowania do obs³ugi kart d¼wiêkowych; szczegó³y na
+  stronie manuala
+- wbudowane tworzenie i poch³anianie danych - nie trzeba
+  przekierowywaæ /dev/null czy /dev/zero; szybko¶æ tych urz±dzeñ
+  specjalnych ró¿ni siê znacz±co miêdzy systemami operacyjnymi, wiêc
+  przekierowywanie ich nie jest odpowiednie przy testach szybko¶ci, a
+  jest marnowaniem zasobów
+- przyjmuje znaki 'k', 'm' i 'g' (oznaczaj±ce kilo, mega i giga) po
+  liczbie ograniczenia rozmiaru danych
+- kod czysty pod k±tem "gcc -Wall", szczególny nacisk zosta³ po³o¿ony
+  na unikanie zachowañ nieokre¶lonych przez ANSI C czy POSIX, z
+  wyj±tkiem wymagania long long; ograniczanie i raportowanie dzia³a na
+  ilo¶ciach danych powy¿ej 4 GB.
 
 %prep
 %setup -q
