@@ -1,5 +1,5 @@
 Summary:	A general-purpose streaming tool
-Summary(pl.UTF-8):   Narzędzie do strumieni ogólnego przeznaczenia
+Summary(pl.UTF-8):	Narzędzie do strumieni ogólnego przeznaczenia
 Name:		cstream
 Version:	2.6.0
 Release:	1
