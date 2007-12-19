@@ -1,12 +1,12 @@
 Summary:	A general-purpose streaming tool
 Summary(pl.UTF-8):	Narzędzie do strumieni ogólnego przeznaczenia
 Name:		cstream
-Version:	2.7.3
+Version:	2.7.4
 Release:	1
 License:	MIT
 Group:		Networking/Utilities
 Source0:	http://www.cons.org/cracauer/download/%{name}-%{version}.tar.gz
-# Source0-md5:	772ecc1f49c1f5e41fb2fb1dbd4f42a1
+# Source0-md5:	eab4c98afef79766dd61a6a36dec845a
 URL:		http://www.cons.org/cracauer/cstream.html
 BuildRequires:	autoconf
 BuildRequires:	automake
